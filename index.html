@@ -1,24 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Изучение JavaScript </title>
 </head>
+
 <body>
     <p> </p>
     <noscript>Включите JavaScript</noscript>
 
     <script>
         document.write("Hello, Js <br>"); //- пример, метод редко используется (выводит текст на web-странику)
-        console.log('Привет JS :)');  // похож на log.
-        console.info();// похож на log.
+        console.log('Привет JS :)'); // похож на log.
+        console.info(); // похож на log.
         console.error(); // выводит ошибку, в функцию модно встаить переменную
         console.warn(); // выводит ошибку, которую нужно исправить
     </script>
-
     <script src="js/function.js"></script>
     <!-- <script src="js/main.js"></script> -->
+
+    <button onclick="">Нажми на меня детка</button>
+
+    <!-- работа с одним атрибутом по id  в js-->
+
+    <br>
+    <p id="string"> строка для изменений </p>
+
+    <!-- работа с названием тега в js-->
+    <br>
+    <div>
+        <span>Text_1</span>
+        <span>Text_2</span>
+        <span>Text_3</span>
+    </div>
+    <br>
+    <!-- работа с классом тега в js-->
+    <div>
+        <span class="simple-class">Text_1</span>
+        <span class="simple-class">Text_2</span>
+        <span class="simple-class">Text_3</span>
+    </div>
+
+    <!-- работа с формой, передача из HTML в JS данных на основе JS атрибута onsubmit:-->
+    <br>
+    <br>
+    <form action="" method="post" id="main-form" onsubmit="return checkForm(this)">
+        <label for="name">Имя</label>
+        <input type="text" name="name" placeholder="Введите имя" id="name"> <br><br>
+        <label for="pass">Пароль</label>
+        <input type="password" name="pass" placeholder="Введите password" id="pass"> <br><br>
+        <label for="repass">Проверить пароль</label>
+        <input type="password" name="repass" placeholder="Введите password" id="repass"> <br><br>
+        <span>Пол:</span>
+        <br>
+        <label for="male">Мужской</label>
+        <input type="radio" name="state" id="male" value="male"> <br><br>
+        <label for="female">Женский</label>
+        <input type="radio" name="state" id="female" value="female"> <br><br>
+        <span id="error" style="color:red"></span>
+        <br>
+        <input type="submit" name="submit" value="Отправить">
+    </form>
+    <!-- работа с формой, передача из HTML без JS атрибутов:-->
+    <br>
+    <br>
+    <form action="" method="post" id="main-form-two">
+        <label for="name">Имя</label>
+        <input type="text" name="name" placeholder="Введите имя" id="name"> <br><br>
+        <label for="pass">Пароль</label>
+        <input type="password" name="pass" placeholder="Введите password" id="pass"> <br><br>
+        <label for="repass">Проверить пароль</label>
+        <input type="password" name="repass" placeholder="Введите password" id="repass"> <br><br>
+        <span>Пол:</span>
+        <br>
+        <label for="male">Мужской</label>
+        <input type="radio" name="state" id="male" value="male"> <br><br>
+        <label for="female">Женский</label>
+        <input type="radio" name="state" id="female" value="female"> <br><br>
+        <span id="error_2" style="color:red"></span>
+        <br>
+        <input type="submit" name="submit" value="Отправить">
+    </form>
+
+    <script src="js/forString.js"></script>
+
 </body>
+
 </html>
