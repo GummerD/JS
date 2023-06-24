@@ -1,0 +1,29 @@
+body{
+    margin: auto;
+    width: 60%;
+    margin-top: 2.5%;
+}
+
+.task_description{
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    border: solid 1px;
+    border-color: black;
+    border-left: none;
+    border-right: none;
+    margin-bottom:2.5%;
+}
+
+.practics {
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    border: solid 1px;
+    border-color: green;
+    border-left: none;
+    border-right: none;
+    margin-bottom:2.5%;
+}
