@@ -1,6 +1,6 @@
 body{
     margin: auto;
-    width: 60%;
+    width: 600px;
     margin-top: 2.5%;
 }
 
@@ -19,11 +19,48 @@ body{
 .practics {
     height: 20%;
     display: flex;
-    justify-content: center;
+    justify-content:center;
+    flex-direction: column;
     font-size: 30px;
     border: solid 1px;
     border-color: green;
     border-left: none;
     border-right: none;
     margin-bottom:2.5%;
+}
+
+.animation{
+    border: solid 2px;
+    height: 50px;
+}
+
+.block{
+    height: 50px;
+    width: 49px;
+    background-color: orange;
+    position: relative;
+}
+
+.animation_2{
+    border: solid 2px;
+    height: 50px;
+}
+
+.block_2{
+    height: 50px;
+    width: 49px;
+    background-color: orange;
+    position: relative;
+}
+
+.animation_3{
+    border: solid 2px;
+    height: 50px;
+}
+
+.block_3{
+    height: 50px;
+    width: 49px;
+    background-color: orange;
+    position: relative;
 }

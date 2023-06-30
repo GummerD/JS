@@ -165,3 +165,86 @@ function searchParent(obj){
 for (let key in users){
     searchParent(users[key]);
 }
+
+//анимирование блока:
+
+// 1.варинт просто по клику
+let position_1 = 0;
+document.querySelector('.block').addEventListener('click', function () {
+    position_1++;
+    this.style.left = position_1 + "px";
+})
+
+
+
+
+// 2. вариант через цикл:
+document.querySelector('.block_2').addEventListener('click', function () {
+    for (let i = 0; i <= 548; i++){
+        this.style.left = i +"px"
+    }
+});
+
+//3.рекурсивная анимация:
+
+let position_3= 0;
+
+document.querySelector('.block_3').addEventListener('click', slowdown);
+
+function recursionAnimation(){
+    position_3++;
+    if(position_3 >547) return;
+    document.querySelector('.block_3').style.left = position_3 + 'px';
+    //setTimeout(recursionAnimation, 9); // можно в функцию сразу инкапсулировать setTimout, но это немного нарушает SOLID по раделению обязанностей
+    slowdown(); // лучше отдельно вызывать замедление, вынеся в отедельную функцию
+}
+
+function slowdown(){
+    setTimeout(recursionAnimation, 9);
+}
+
+//ФАКТОРИАЛ, ЧИСЛА ФИБАНАЧИ И Т.Д. через рекурсия:
+// Факториал - произведение чисел:
+// Пример на цикле:
+let x = 1;
+
+function factorCicly(n){
+    for(let i = 1; i <= n; i++){
+        x = x*i; 
+        console.log(x);
+    }
+    console.log(x);
+}
+
+factorCicly(5);
+
+//свой варинт рекурсии факториала
+
+let fact_i = 1;
+let fact_x = 1;
+
+function factorialRecursia_1(n){
+    fact_i++;
+    if(fact_i > n) return;
+    fact_x = fact_x * fact_i; 
+    factorialRecursia_1(n);
+}
+
+factorialRecursia_1(5);
+
+console.log(fact_x);
+
+//часто используемый варинт рекурссии факториала
+let fact_z = 1;
+
+function factorialRecursia_2(n){
+    if(n === 0) return;
+    fact_z = fact_z * n; 
+    factorialRecursia_2(n-1);
+}
+
+let n_3 = 1
+
+factorialRecursia_2(n_3);
+
+console.log(`Фатокриал из  ${n_3} равен: ${fact_z}`);
