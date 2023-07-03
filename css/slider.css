@@ -1,0 +1,63 @@
+body{
+    max-width: 1200px;
+    margin: auto ;
+}
+
+.header{
+    height: 50px;
+}
+
+.container{
+    background-color: rgb(235, 229, 229);
+}
+
+.header{
+    margin-top: 100px;
+    background-color: rgb(235, 229, 229);
+    height: 50px;
+
+}
+
+.slider{
+    display: flex;
+    margin:auto;
+    height: 300px;
+    width: 250px;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
+.slaider-line{
+    display: flex;
+    width: 1024px;
+    height: 300px;
+    position: relative;
+    left:0;
+    transition: 1s;
+    
+}
+
+.slaider-line-img{
+    height: 300px;
+    width: 250px;
+}
+
+.button{
+    margin-top: 1.5%;
+}
+
+button {
+    background: none;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 20px;
+}
+
+button:hover{
+     background-color: orange;
+}
+
+button:active{
+    background-color: black;
+}
