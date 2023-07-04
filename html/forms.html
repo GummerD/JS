@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/forms.css">
+    <title>Разбираем формы</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- 1.Выводит текст + цифры-->
+        <section class="section">
+            <h3>1. Input[type=text]</h3>
+            <input type="text" class="i-1">
+            <button class="b-1">from input</button>
+            <div class="out-block ">
+                <h1>Выводит буквы и цифры:</h1>
+                <p class="out-1">
+
+                </p>
+            </div>
+        </section>
+
+        <!-- 2.Выводит только цифры-->
+        <section class="section">
+            <h3>2. Input[type=number]</h3>
+            <input type="number" class="i-2">
+            <button class="b-2">from input</button>
+            <div class="out-block ">
+                <h1>Выводит только цифры:</h1>
+                <p class="out-2">
+
+                </p>
+            </div>
+        </section>
+
+        <!-- 3.Выбор цвета-->
+        <section class="section">
+            <h3>3. Input[type=color]</h3>
+            <input type="color" class="i-3">
+            <button class="b-3">from input</button>
+            <div class="out-block ">
+                <h1>Выводит номер цвета, который можно передать по необходимости:</h1>
+                <p class="out-3"></p>
+                <div class="out-color-3"></div>
+            </div>
+        </section>
+
+        <!-- 4.Выбор даты-->
+        <section class="section">
+            <h3>4. Input[type=date]</h3>
+            <input type="date" class="i-4">
+            <button class="b-4">from input</button>
+            <div class="out-block ">
+                <h1>Выводит выбранную дату:</h1>
+                <p class="out-4"></p>
+            </div>
+        </section>
+
+        <!-- 5.Диапозон -->
+        <section class="section">
+            <h3>5. Input[type=range]</h3>
+            <input type="range" class="i-5">
+            <button class="b-5">from input</button>
+            <div class="out-block ">
+                <h1>Выводит диапозон:</h1>
+                <p class="out-5"></p>
+            </div>
+        </section>
+
+        <!-- 6.CheckBox -->
+        <section class="section">
+            <h3>6. Input[type=checkbox]</h3>
+            <input type="checkbox" class="i-6" id="i-6">
+            <label for="i-6">CheckBox</label>
+            <!-- Нужен для более удобного ввода информации, можно кликнуть по названию -->
+            <button class="b-6">from input</button>
+            <div class="out-block ">
+                <h1>Выводит диапозон:</h1>
+                <p class="out-6"></p>
+            </div>
+        </section>
+
+        <!-- 7.Radio -->
+        <section class="section">
+            <h3>7. Input[type=radio]</h3>
+            <!-- Чтобы связать между собой все radio-button  всем необходимо присвоить атрибут - name -->
+            <!-- для того чтобы в js можно было отлавливать нажатие на radio необходимо устновить checked -->
+            <div>
+                <input type="radio" class="i-7" id="idr-1" checked name="rb" value="some_value_1">
+                <label for="idr-1">Option 1</label>
+            </div>
+            <div>
+                <input type="radio" class="i-7" id="idr-2" name="rb" value="some_value_2">
+                <label for="idr-2">Option 2</label>
+            </div>
+            <div>
+                <input type="radio" class="i-7" id="idr-3" name="rb" value="some_value_3">
+                <label for="idr-3">Option 3</label>
+            </div>
+            <button class="b-7">from input</button>
+            <div class="out-block ">
+                <h1>Выводит результат одного из трех radio-button:</h1>
+                <p class="out-7"></p>
+            </div>
+        </section>
+
+        <!-- 8. Получение пароля -->
+        <section class="section">
+            <h3>8. Input[type=password]</h3>
+            <input type="password" class="i-8">
+            <button class="b-8">from input</button>
+            <div class="out-block ">
+                <h1>Выводит пароль пользователя:</h1>
+                <p class="out-8"></p>
+            </div>
+        </section>
+
+        <!-- 9. Получение эл. почты -->
+        <section class="section">
+            <h3>9. Input[type=email]</h3>
+            <input type="email" class="i-9">
+            <button class="b-9">from input</button>
+            <div class="out-block ">
+                <h1>Выводит пароль эл. адрес почты пользователя:</h1>
+                <p class="out-9"></p>
+            </div>
+        </section>
+
+        <!-- 10. Получение select или выбор -->
+        <section class="section">
+            <h3>10. Input[type=select]</h3>
+            <select class="i-10">
+                <option value="first">first</option>
+                <option value="second">second</option>
+                <option value="third">third</option>
+                <option value="fourth">fourth</option>
+            </select>
+            <button class="b-10">from input</button>
+            <div class="out-block ">
+                <h1>Выводит зарнее определенное значение</h1>
+                <p class="out-10"></p>
+            </div>
+        </section>
+
+        <!-- 11. Получение textarea - текстовая область-->
+        <section class="section">
+            <h3>11. Input[type=textarea]</h3>
+            <textarea class="i-11"></textarea>
+            <button class="b-11">from input</button>
+            <div class="out-block ">
+                <h1>Выводит введенный текст:</h1>
+                <p class="out-11"></p>
+            </div>
+        </section>
+
+        <!-- 12. Form-->
+        <section class="section"></section>
+            <h3>12. Form</h3>
+            <form action="">
+                <input type="text" name="new_input_12">
+                <br>
+                <hr>
+                <input type="checkbox" id ="chb_12" value="some_value_12" name="checkbox_12">
+                <label for="chb-12">CheckBox-11</label>
+                <br>
+                <hr>
+                <input type="radio" id ="rad_12_1" name="radio_12" checked>
+                <label for="rad_12_1">Radio 1</label>
+                <br>
+                <input type="radio" id ="rad_12_2" name="radio_12">
+                <label for="rad_12_2">Radio 2</label>
+                <br>
+                <input type="radio" id ="rad_12_3" name="radio_12">
+                <label for="rad_12_3">Radio 3</label>
+                <br>
+                <hr>
+                <select name="select_12" id="select_12">
+                    <option value="choice_1">choice 1</option>
+                    <option value="choice_2">choice 2</option>
+                    <option value="choice_3">choice 3</option>
+                </select>
+                <br>
+                <br>
+                <button type="submit">Простокнопка</button>
+            </form>
+        </section>
+
+    </div>
+
+    <footer class="footer">
+
+    </footer>
+
+    <script src="../js/forms.js"></script>
+</body>
+
+</html>
