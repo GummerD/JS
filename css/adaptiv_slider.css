@@ -1,0 +1,42 @@
+body{
+    margin: auto ;
+}
+
+.container{
+    margin: auto;
+    max-width: 800px ;
+    background-color: rgb(230, 222, 222);
+}
+
+.container h1{
+    font-size: 25px;
+    transition: all ease 1s;
+}
+
+.container h1{
+    display: flex;
+    justify-content: center;
+}
+
+.slider{
+    border: 1px solid black;
+    max-width: 80%;
+    margin: 10% auto;
+    width: 300px;
+    overflow: hidden;   
+}
+
+.slider-line {
+    display: flex;
+    position: relative;
+    transition: all ease 1s;
+}
+
+
+.container button:hover{
+    background-color: blueviolet;
+}
+
+.container button:active{
+    background-color: rgb(226, 43, 98);
+}
