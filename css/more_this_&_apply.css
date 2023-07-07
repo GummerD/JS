@@ -1,0 +1,28 @@
+body{
+    margin: auto;
+    max-width: 800px;
+    max-height: 1000px;
+}
+
+.container{
+    margin: auto;
+    background-color: rgb(191, 192, 194);
+    width: 700px;
+}
+
+.container .h_1{
+    margin-left: 25%;
+}
+
+
+.b_1{
+    margin-top: 30%;
+}
+
+button:hover{
+    background-color: red;
+}
+
+button:active{
+    background-color: rgb(246, 255, 240);
+}
