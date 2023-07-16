@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каррирование с зацеплением</title>
+</head>
+
+<body>
+    <section>
+        <div class='example_carring'>
+
+        </div>
+    </section>
+
+    <script>
+        let out = document.querySelector('.example_carring');
+        
+        let new_teg = teg => text => `<${teg}>${text}<${teg}>`;
+
+        let p = new_teg('p');
+        //console.log(p);
+        let some_text = p('some_text');
+        //console.log(some_text);
+
+        out.innerHTML += some_text + '<br>';
+        
+
+        function currying_regular_elements(teg, text) {
+            return function(){
+               return `<${teg}>${text}<${teg}>`;
+            }
+        }
+
+        let new_regular_element = currying_regular_elements('h1', 'some text for teg h1');
+        let new_regular_element_2 = currying_regular_elements('p', 'some text for teg p');
+        //console.log(new_html_block);
+        out.innerHTML += new_regular_element() + '<br>';
+        out.innerHTML += new_regular_element_2() + '<br>';
+        
+        function second_currying_regular_elements(teg, text) {
+            return function () {
+                if (text === '') {
+                    return teg === 'ничего';
+                }else{
+                    return `<${teg}>${text}<${teg}>`; 
+                }
+                
+            }
+        }
+
+        let array_element = [
+            second_currying_regular_elements('h2', 'text for teg - h2'),
+            second_currying_regular_elements('h3', 'text for teg - h3'),
+            second_currying_regular_elements('h1', 'text for teg - h1'),
+        ];
+        // здесь появилась сложность с дополнительным пустым тегом, дублирется без текста
+        array_element.forEach(function (item) {
+            out.innerHTML += item();
+        }) + '<br>';
+    </script>
+</body>
+
+</html>
