@@ -1,0 +1,20 @@
+body{
+    margin: auto;
+}
+
+.section_1{
+    margin: auto;
+    margin-top:1.5%;
+    width: 800px;
+    height: 1000px;
+}
+
+.img_block{
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.img_infinix{
+    width: 150px;
+    height: 250px;
+}
