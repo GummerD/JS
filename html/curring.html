@@ -9,14 +9,14 @@
 
 <body>
     <section>
-        <div class='example_carring'>
+        <div class='example_curring'>
 
         </div>
     </section>
 
     <script>
-        let out = document.querySelector('.example_carring');
-        
+        let out = document.querySelector('.example_curring');
+
         let new_teg = teg => text => `<${teg}>${text}<${teg}>`;
 
         let p = new_teg('p');
@@ -25,11 +25,11 @@
         //console.log(some_text);
 
         out.innerHTML += some_text + '<br>';
-        
+
 
         function currying_regular_elements(teg, text) {
-            return function(){
-               return `<${teg}>${text}<${teg}>`;
+            return function () {
+                return `<${teg}>${text}<${teg}>`;
             }
         }
 
@@ -38,15 +38,15 @@
         //console.log(new_html_block);
         out.innerHTML += new_regular_element() + '<br>';
         out.innerHTML += new_regular_element_2() + '<br>';
-        
+
         function second_currying_regular_elements(teg, text) {
             return function () {
                 if (text === '') {
                     return teg === 'ничего';
-                }else{
-                    return `<${teg}>${text}<${teg}>`; 
+                } else {
+                    return `<${teg}>${text}<${teg}>`;
                 }
-                
+
             }
         }
 
@@ -58,7 +58,27 @@
         // здесь появилась сложность с дополнительным пустым тегом, дублирется без текста
         array_element.forEach(function (item) {
             out.innerHTML += item();
-        }) + '<br>';
+        });
+
+        // попытка убрать ненужные теги при каррировании через замыкание с использованием массива:
+
+        let array_element_third = [
+            third_currying_regular_elements('p', 'text for teg - p1'),
+            third_currying_regular_elements('p', 'text for teg - p2'),
+            third_currying_regular_elements('p', 'text for teg - p3'),
+        ];
+
+        function third_currying_regular_elements(teg, text) {
+
+            return `<${teg}>${text}<${teg}>`;
+
+        }
+
+        array_element_third.forEach(function (item) {
+            out.innerHTML += item;
+        });
+        // cситуация не поменялась
+
     </script>
 </body>
 
