@@ -32,8 +32,10 @@ function changeLang() {
 
     for (let key in lengArray) {
         let elem = document.querySelector(`.lng-${key}`)
+        let text =  lengArray[key][hash];
+        text = text[0].toUpperCase() + text.substring(1);
         if (elem) {
-            elem.innerHTML += lengArray[key][hash];
+            elem.innerHTML = text;
         }
     }
 }
